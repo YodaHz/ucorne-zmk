@@ -12,17 +12,22 @@
     tapping-term-ms = <400>;
 };
 
+&caps_word {
+   continue-list = <UNDERSCORE MINUS BACKSPACE>;
+};
+
 / {
-    behaviors {
-        skq: sticky_key_quick_release {
-            compatible = "zmk,behavior-sticky-key";
-            label = "STICKY_KEY_QUICK_RELEASE";
-            #binding-cells = <1>;
-            bindings = <&kp>;
-            release-after-ms = <1000>;
-            quick-release;
-        };
-    }; 
+//     behaviors {
+//         skq: sticky_key_quick_release {
+//             compatible = "zmk,behavior-sticky-key";
+//             label = "STICKY_KEY_QUICK_RELEASE";
+//             #binding-cells = <1>;
+//             bindings = <&kp>;
+//             release-after-ms = <1000>;
+//             quick-release;
+//         };
+//     }; 
+
     combos{
         compatible = "zmk,combos";
         combo_commadot_tab {
