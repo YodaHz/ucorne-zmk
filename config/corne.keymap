@@ -8,16 +8,65 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-&mt {
-    tapping-term-ms = <400>;
-};
+// &mt {
+//     tapping-term-ms = <400>;
+// };
 
-&caps_word {
-   continue-list = <UNDERSCORE MINUS BACKSPACE>;
+// &caps_word {
+//    continue-list = <UNDERSCORE MINUS BACKSPACE>;
+// };
+
+// Macros
+#define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro				
+
+// To do
+// - find a place for FUNC, MEDIA, and MOUSE to be toggled, maybe both thumbs toggles a selection layer?
+
+// Backspace/delete multiple on double tap hold
+&lt {
+    tapping-term-ms = <250>;
+    quick_tap_ms = <200>;
+    flavor = "tap-preferred";
 };
 
 / {
     behaviors {
+        as: auto_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "AUTO_SHIFT";
+            #binding-cells = <2>;
+            tapping_term_ms = <200>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+        hm: homerow {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;    // <---[[moderate duration]]
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+        hshft: homerow_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS_SHIFT";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <199>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+        ht_tp: holdtap_tappreferred {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLD_TAP_TAP_PREFERRED";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            bindings = <&kp>, <&kp>;
+        };
         skq: sticky_key_quick_release {
             compatible = "zmk,behavior-sticky-key";
             label = "STICKY_KEY_QUICK_RELEASE";
@@ -25,6 +74,38 @@
             bindings = <&kp>;
             release-after-ms = <1000>;
             quick-release;
+        };
+        hltr: hold_layer_tap_repeat {
+            label = "HOLD_LAYER_TAP_REPEAT";
+            #binding-cells = <2>;
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&mo>, <&key_repeat>;
+            tapping-term-ms = <120>;
+            flavor = "tap-preferred";
+        };
+        hmtsk: hold_mod_tap_sticky_key {
+            label = "HOLD_MOD_TAP_STICKY_KEY";
+            #binding-cells = <2>;
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&kp>, <&skq>;
+            tapping-term-ms = <120>;
+            flavor = "tap-preferred";
+        };
+        hltsk: hold_layer_tap_sticky_key {
+            label = "HOLD_LAYER_TAP_STICKY_KEY";
+            #binding-cells = <2>;
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&mo>, <&skq>;
+            tapping-term-ms = <120>;
+            flavor = "tap-preferred";
+        };
+        hltsl: hold_layer_tap_sticky_layer {
+            label = "HOLD_LAYER_TAP_STICKY_LAYER";
+            #binding-cells = <2>;
+            compatible = "zmk,behavior-hold-tap";
+            bindings = <&mo>, <&sl>;
+            tapping-term-ms = <120>;
+            flavor = "tap-preferred";
         };
     }; 
 
@@ -60,7 +141,7 @@
                         bindings = <
    &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
    &mt LCTRL ESC &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &mt LSHFT Z &kp X &kp C &kp V &kp B   &kp N &ht_tp LALT M  &kp COMMA &kp DOT &mt RSHFT FSLH &kp ESC
+   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &ht_tp LALT M  &kp COMMA &kp DOT &kp FSLH &kp RSHFT
                   &kp LGUI &mo 1 &kp RET     &mo 2 &kp SPACE &kp RALT
                         >;
                 };
