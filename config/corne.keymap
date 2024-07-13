@@ -302,10 +302,10 @@
 
         layer_13 {
             bindings = <
-&trans  &trans     &trans     &trans        &trans          &trans    &trans          &mmv MOVE -300 300   &mmv MOVE 300 300   &trans           &trans     &trans
-&trans  &trans     &trans     &trans        &kp LEFT_SHIFT  &trans    &mmv MOVE_LEFT  &mmv MOVE_DOWN       &mmv MOVE_UP        &mmv MOVE_RIGHT  &mkp MCLK  &trans
-&trans  &kp RCTRL  &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT    &trans    &trans          &mmv MOVE -300 -300  &mmv MOVE 300 -300  &trans           &trans     &trans
-                              &trans        &trans          &trans    &trans          &mkp LCLK            &mkp RCLK
+&trans  &trans     &trans     &trans        &trans          &trans    &trans            &none             &mmv MOVE 300 300  &trans             &trans     &trans
+&trans  &trans     &trans     &trans        &kp LEFT_SHIFT  &trans    &mmv MOVE_LEFT    &mmv MOVE_DOWN    &mmv MOVE_UP       &mmv MOVE_RIGHT    &mkp MCLK  &trans
+&trans  &kp RCTRL  &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT    &trans    &msc SCROLL_LEFT  &msc SCROLL_DOWN  &msc SCROLL_UP     &msc SCROLL_RIGHT  &trans     &trans
+                              &trans        &trans          &trans    &trans            &mkp LCLK         &mkp RCLK
             >;
         };
     };
