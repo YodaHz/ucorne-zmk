@@ -220,10 +220,10 @@
 
         layer_4 {
             bindings = <
-&kp TILDE       &kp C_PLAY    &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp LESS_THAN        &kp GREATER_THAN          &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp PRINTSCREEN  &kp EQUAL
-&kp GRAVE       &kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3      &kp NUMBER_4          &mt LEFT_SHIFT N5    &mt RIGHT_SHIFT NUMBER_6  &kp NUMBER_7           &kp NUMBER_8       &kp NUMBER_9     &kp NUMBER_0     &kp MINUS
-&kp LEFT_SHIFT  &kp F1        &kp F2          &kp F3            &kp F4                &kp F5               &kp F8                    &kp F9                 &kp F10            &kp F11          &kp F12          &kp RIGHT_SHIFT
-                                              &trans            &kp LEFT_SHIFT        &trans               &kp LEFT_ALT              &kp LEFT_CONTROL       &kp LEFT_WIN
+&kp TILDE       &kp C_PLAY    &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS     &kp LESS_THAN        &kp GREATER_THAN          &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE  &kp PRINTSCREEN  &kp EQUAL
+&kp GRAVE       &kp NUMBER_1  &kp NUMBER_2    &kp NUMBER_3      &mt LEFT_SHIFT NUMBER_4  &mt LEFT_SHIFT N5    &mt RIGHT_SHIFT NUMBER_6  &mt RIGHT_SHIFT N7     &kp NUMBER_8       &kp NUMBER_9     &kp NUMBER_0     &kp MINUS
+&kp LEFT_SHIFT  &kp F1        &kp F2          &kp F3            &kp F4                   &kp F5               &kp F8                    &kp F9                 &kp F10            &kp F11          &kp F12          &kp RIGHT_SHIFT
+                                              &trans            &kp LEFT_SHIFT           &trans               &kp LEFT_ALT              &kp LEFT_CONTROL       &kp LEFT_WIN
             >;
         };
 
