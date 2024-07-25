@@ -283,10 +283,10 @@
 
         layer_11 {
             bindings = <
-&trans  &trans  &trans            &trans        &trans        &trans    &kp INS     &kp HOME        &kp PAGE_UP    &kp CAPS   &kp SCROLLLOCK   &kp BACKSPACE
-&trans  &trans  &trans            &trans        &trans        &trans    &kp LEFT    &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT  &kp PRINTSCREEN  &kp LC(LA(DELETE))
-&trans  &trans  &kp LEFT_CONTROL  &kp LEFT_WIN  &kp LEFT_ALT  &trans    &kp DELETE  &kp END         &kp PAGE_DOWN  &trans     &kp PAUSE_BREAK  &trans
-                                  &trans        &trans        &trans    &trans      &trans          &trans
+&trans  &trans  &trans            &trans        &trans        &trans    &kp INS     &kp HOME  &kp PAGE_UP    &kp CAPS   &kp SCROLLLOCK   &kp BACKSPACE
+&trans  &trans  &trans            &trans        &trans        &trans    &kp LEFT    &kp DOWN  &kp UP         &kp RIGHT  &kp PRINTSCREEN  &kp LC(LA(DELETE))
+&trans  &trans  &kp LEFT_CONTROL  &kp LEFT_WIN  &kp LEFT_ALT  &trans    &kp DELETE  &kp END   &kp PAGE_DOWN  &trans     &kp PAUSE_BREAK  &trans
+                                  &trans        &trans        &trans    &trans      &trans    &trans
             >;
         };
 
