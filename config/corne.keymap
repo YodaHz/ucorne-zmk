@@ -151,6 +151,11 @@
             bindings = <&kp BACKSPACE>;
             key-positions = <20 21>;
         };
+
+        Alt+Tab {
+            bindings = <&kp LA(TAB)>;
+            key-positions = <14 15 16>;
+        };
     };
 };
 
@@ -166,9 +171,9 @@
             //                    | GUI | LWR | ENT |   | SPC | RSE  | ALT |
 
             bindings = <
-&kp GRAVE         &kp Q    &kp W           &kp E              &kp R                &kp T           &kp Y         &kp U                 &kp I                   &kp O                &kp P      &kp NON_US_BACKSLASH
-&ht_tp LCTRL ESC  &lt 8 A  &lt 9 S         &lt 12 D           &ht_tp LEFT_SHIFT F  &lt 10 G        &kp H         &ht_tp RIGHT_SHIFT J  &kp K                   &kp L                &kp COLON  &ht_tp RCTRL SQT
-&kp LSHFT         &kp Z    &ht_tp LCTRL X  &ht_tp LEFT_WIN C  &ht_tp LEFT_ALT V    &kp B           &kp N         &ht_tp RIGHT_ALT M    &ht_tp RIGHT_WIN COMMA  &ht_tp RCTRL PERIOD  &kp FSLH   &kp RSHFT
+&kp GRAVE         &kp Q    &kp W           &kp E              &kp R                &kp T           &kp Y         &kp U                 &kp I                   &kp O                &kp P          &kp NON_US_BACKSLASH
+&ht_tp LCTRL ESC  &lt 8 A  &lt 9 S         &lt 12 D           &ht_tp LEFT_SHIFT F  &lt 10 G        &kp H         &ht_tp RIGHT_SHIFT J  &kp K                   &kp L                &kp SEMICOLON  &ht_tp RCTRL SQT
+&kp LSHFT         &kp Z    &ht_tp LCTRL X  &ht_tp LEFT_WIN C  &ht_tp LEFT_ALT V    &kp B           &kp N         &ht_tp RIGHT_ALT M    &ht_tp RIGHT_WIN COMMA  &ht_tp RCTRL PERIOD  &kp FSLH       &kp RSHFT
                                            &kp LGUI           &mo 11               &lt 4 ESCAPE    &lt 12 SPACE  &lt 8 SPACE           &tog 11
             >;
         };
@@ -283,10 +288,10 @@
 
         layer_11 {
             bindings = <
-&trans  &trans  &trans            &trans        &trans        &trans    &kp INS     &kp HOME  &kp PAGE_UP    &kp CAPS   &kp SCROLLLOCK   &kp BACKSPACE
-&trans  &trans  &trans            &trans        &trans        &trans    &kp LEFT    &kp DOWN  &kp UP         &kp RIGHT  &kp PRINTSCREEN  &kp LC(LA(DELETE))
-&trans  &trans  &kp LEFT_CONTROL  &kp LEFT_WIN  &kp LEFT_ALT  &trans    &kp DELETE  &kp END   &kp PAGE_DOWN  &trans     &kp PAUSE_BREAK  &trans
-                                  &trans        &trans        &trans    &trans      &trans    &trans
+&trans  &trans  &trans            &trans        &trans        &trans    &kp INS     &kp HOME        &kp PAGE_UP    &kp CAPS   &kp SCROLLLOCK   &kp BACKSPACE
+&trans  &trans  &trans            &trans        &trans        &trans    &kp LEFT    &kp DOWN_ARROW  &kp UP         &kp RIGHT  &kp PRINTSCREEN  &kp LC(LA(DELETE))
+&trans  &trans  &kp LEFT_CONTROL  &kp LEFT_WIN  &kp LEFT_ALT  &trans    &kp DELETE  &kp END         &kp PAGE_DOWN  &trans     &kp PAUSE_BREAK  &trans
+                                  &trans        &trans        &trans    &trans      &trans          &trans
             >;
         };
 
